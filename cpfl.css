@@ -1,0 +1,322 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f9fafc;
+    color: #212529;
+    line-height: 1.5;
+}
+a { color: #335eea; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.section {
+    background-color: #eae8e0;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto 10px; /* bottom 10px, making little whitspace after each sections (about, exp, projects etc.) */
+}
+
+h1, h2, h3 { font-weight: 700; }
+h1 { font-size: 2.5em; margin-bottom: 10px; }
+h2 { font-size: 2em; margin-bottom: 25px; text-align: center; color: #2255aa;}
+h3 { font-size: 1.25em; margin-bottom: 10px; }
+
+.highlight { color: #ee7733; }
+.highlight2 { color: #cc7846; }
+
+.home-section { background: #333333; border-bottom: 1px solid #c7d4f6; }
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+.home-text { flex: 2 1 340px;
+             color: #f0f0ef;
+
+}
+.home-text h1 { font-size: 2em; }
+.home-text .subtitle { font-size: 1.2em; color: #8daab8; margin-bottom: 18px; }
+.button {
+    display: inline-block;
+    padding: 10px 28px;
+    background: #cf7b48;
+    color: #fdfdfb;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 18px 0 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 1.4s;
+    text-decoration: none;
+}
+
+.button:hover { background: #c24b0c; color: #dad6cb;}
+.social-links a {
+    color: light-blue;
+    margin-right: 18px;
+    font-size: 1.5em;
+    transition: color 0.18s;
+    display: inline-block;
+}
+.social-links a:hover {
+    color: #C96F32;
+}
+
+
+.home-img {
+    flex: 1 1 220px;
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    object-fit: cover;
+}
+
+#txtleft{
+    text-align: left;
+    border-bottom: 2px solid #303336;
+    padding-bottom: 3px;
+    margin-bottom: 90px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 20px;
+}
+.about-img {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+    margin-bottom: 18px;
+    object-fit: cover;
+}
+.about-content > div {
+    flex: 1 1 340px;
+    min-width: 230px;
+}
+
+.skills-list {
+    display: flex;
+    gap: 60px;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.txtSkill {
+    border-bottom: 2px solid #303336;
+}
+
+
+.skills-list ul {
+    list-style: disc inside;
+    font-size: 1.05em;
+    padding-left: 0px;
+}
+.skills-img {
+    width: 290px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    object-fit: cover;
+    margin-left: 100px;
+    margin-bottom: 71px;
+}
+
+.skills-description {
+    font-size: 1em;
+    margin: 12px 0 0 0;
+    color: #333;
+    text-align: center;
+}
+
+/* To Re-size Exp, Projects Images */
+.gallery-img,
+.img-fluid {
+    max-width: 220px;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    border: 2px solid #fff;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Needed to override/re-adjust images of specifically projects section. */
+#projects .gallery-img,
+#projects .img-fluid {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.11);
+    border: 2px solid #ececec;
+    background: #222;           
+    margin: 0 auto;
+    transition: transform 0.21s, border-color 0.15s;
+}
+
+
+
+.gallery-img:hover,
+.img-fluid:hover {
+    transform: scale(1.07);
+    border-color: #2255aa;
+}
+
+/* On small screens, making gallery images full-width */
+@media (max-width: 600px) {
+    .gallery-img,
+    .img-fluid {
+        max-width: 98vw;
+        height: 26vw;
+        min-height: 70px;
+    }
+    .about-img, .skills-img, .profile-img {
+        max-width: 96vw;
+    }
+}
+
+.img-caption {
+    font-size: 0.98em;
+    color: #6d7886;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.work-gallery, .projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 12px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1.2px solid #a0a8b3;
+    font-size: 1em;
+}
+.contact-form textarea { resize: vertical; }
+.contact-form button { width: 120px; align-self: flex-end; }
+
+.footer {
+    background: #2255aa;
+    color: #fff;
+    text-align: center;
+    padding: 28px 0 10px;
+    font-size: 1em;
+    margin-top: 40px;
+}
+.footer-social a {
+    margin: 0 10px;
+    color: #e3eaff;
+    font-size: 1em;
+}
+.footer-social a:hover { text-decoration: underline; }
+.footer-copy {
+    margin-top: 9px;
+    font-size: 0.95em;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .home-content, .about-content, .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 { font-size: 1.3em; }
+    h2 { font-size: 1.15em; }
+    .section { padding: 40px 6px; }
+    .profile-img, .about-img, .skills-img, .gallery-img {
+        width: 90vw;
+        max-width: 220px;
+    }
+}
+
+
+/* overriding these to adjust home section size. */
+.home-section {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.home-content {
+    gap: 10px;
+}
+
+.home-text h1 {
+    margin-bottom: 6px;
+}
+
+.home-text .subtitle {
+    margin-bottom: 8px;
+}
+
+.button {
+    margin: 12px 0 12px 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+
+.navbar-nav .nav-link {
+    color: #303336;
+    border-radius: 8px;
+    padding: 5px 18px;
+    margin: 0 5px;
+    transition:
+            background 1s,
+            color 0.7s,
+            box-shadow 0.9s;
+    font-weight: 500;
+    font-size: 1.07em;
+    letter-spacing: 0.02em;
+     
+}
+
+
+.navbar-nav .nav-link:hover {
+    background: #f3e8da;
+    color: #303336;
+    border-color: #303336;        
+    box-shadow: 0 1px 7px rgba(201,111,50,0.12);
+}
+
+}
+
+  /* To re-size gaps between projects' images */
